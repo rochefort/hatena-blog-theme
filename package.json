@@ -1,0 +1,22 @@
+{
+  "name": "komforta",
+  "version": "1.0.0",
+  "description": "Komforta は、はてなブログのデザインCSSカスタマイズの土台に適したデザインテーマです。",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp run",
+    "test": "gulp test",
+    "bower": "gulp bower",
+    "lint": "gulp lint",
+    "build": "gulp build",
+    "clean": "gulp clean"
+  },
+  "author": "rochefort",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-plumber": "^1.0.1"
+  }
+}
