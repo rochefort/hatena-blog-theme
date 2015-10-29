@@ -13,10 +13,13 @@ gulp.task('run', function() {
 
 gulp.task('compile', function() {
   return gulp.src('./komforta.less')
-    .pipe(plumber())
-    .pipe(less({
-      paths: ['./']
+    .pipe(plumber({
+      errorHandler: function(error) {
+        console.log(error.message);
+        this.emit('end');
+      }
     }))
+    .pipe(less())
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
 });
