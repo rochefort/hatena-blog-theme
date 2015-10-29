@@ -1436,7 +1436,7 @@ a.keyword {
   }
 }
 /* Media Queries - Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1023px) {
   #container {
     position: static;
     display: block;
@@ -1495,7 +1495,6 @@ a.keyword {
     left: 12px;
   }
   .entry-title {
-    text-align: center;
     padding-bottom: .5em;
     margin: 0;
     line-height: 1.5em;
@@ -1561,11 +1560,11 @@ a.keyword {
     padding: 0 4px;
   }
   .hatena-module {
-    width: 94%;
+    width: 240px;
     overflow: hidden;
     float: left;
     padding: 0;
-    margin: 0 3% 25px;
+    margin: 0 0 25px 30px;
   }
   .hatena-module-title {
     padding: 25px 0 20px;
@@ -1656,33 +1655,4 @@ a.keyword {
   }
 }
 /* Media Queries - Small Tablet & Smartphone */
-@media (max-width: 767px) {
-  #globalheader-container {
-    position: static;
-  }
-  #container {
-    width: 93.75%;
-    word-wrap: break-word;
-    overflow: hidden;
-  }
-  #main {
-    width: 100%;
-    float: none;
-  }
-  #box2 {
-    width: 100%;
-    float: none;
-  }
-  #box2-inner {
-    width: 100%;
-  }
-  .hatena-module {
-    width: 100%;
-    float: none;
-  }
-  .entry-header-menu {
-    top: -30px;
-    left: 0px;
-  }
-}
 /* Media Queries - Smartphone */
