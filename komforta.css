@@ -1051,6 +1051,10 @@ a.keyword {
   border-radius: 50%;
   background-clip: padding-box;
 }
+.hatena-module-profile .id {
+  padding-left: 2px;
+  display: inline-block;
+}
 .hatena-module-profile .id a {
   display: block;
   font-size: 16px;
@@ -1059,6 +1063,9 @@ a.keyword {
 }
 .hatena-module-profile .profile-description p {
   margin-top: 0;
+}
+.hatena-module-profile .hatena-follow-button-box {
+  clear: none;
 }
 .hatena-follow-button {
   width: 88px;
