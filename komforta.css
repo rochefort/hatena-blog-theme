@@ -818,6 +818,7 @@ a.keyword {
 }
 .entry-content pre {
   border: 1px solid #ddd;
+  background-color: rgba(97, 99, 92, 0.1);
   margin: 0 0 10px;
   padding: 20px;
   white-space: pre;
