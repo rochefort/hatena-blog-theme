@@ -1290,6 +1290,7 @@ a.keyword {
 }
 .pager a {
   color: gray;
+  display: block;
 }
 .pager a:hover {
   color: #444;
