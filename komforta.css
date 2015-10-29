@@ -1,9 +1,9 @@
 @charset "utf-8";
 /*
-  Theme: boilerplate
-  Author: Hatena Blog Team
+  Theme: Komforta
+  Author: rochefort
   Description:
-    はてなブログのデザインCSSカスタマイズの土台に適したデザインテーマです。
+    はてなブログのデザインCSSカスタマイズの土台にしたデザインテーマです。
     このテーマをもとにしてCSSを書くと比較的楽にカスタマイズできます。
     特定の部分（例えば記事本文の書式やコメント欄のスタイルなど）だけをコピーして使ってもかまいません。
     もちろんそのままの状態でも、シンプルなテーマとして使うことができます。
@@ -19,6 +19,8 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+@import "http://fonts.googleapis.com/css?family=Lato:300,700|Titillium+Web:200,400,700|Open+Sans:400,700";
 html {
   font-family: sans-serif;
   /* 1 */
@@ -400,56 +402,44 @@ th {
 /* Link text color(hover) */
 /* Link text color(hover) */
 /* Border color */
+/* button text color*/
 /* button background */
 /* button hover backgroud */
+/*  import font */
 /* Common */
 html,
 body {
-  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
-  color: #454545;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
+  color: #444;
   background-color: #fff;
+  font-size: .9em;
 }
 a {
-  color: #1487bd;
+  color: #6a708f;
 }
-a:hover {
-  color: #0f5373;
-}
+a:link,
 a:visited {
-  color: #789dae;
-}
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-h1 a:hover,
-h2 a:hover,
-h3 a:hover,
-h4 a:hover,
-h5 a:hover,
-h6 a:hover,
-h1 a:visited,
-h2 a:visited,
-h3 a:visited,
-h4 a:visited,
-h5 a:visited,
-h6 a:visited {
-  color: #333;
+  color: #6a708f;
   text-decoration: none;
+  -webkit-transition-property: all 0.4s ease;
+  -moz-transition-property: all 0.4s ease;
+  -o-transition-property: all 0.4s ease;
+  transition-property: all 0.4s ease;
+}
+a:hover,
+a:active {
+  color: #8a90ad;
 }
 a.keyword {
   text-decoration: none;
-  border-bottom: 1px dotted #ddd;
-  color: #454545;
+  color: #444;
 }
 /* Buttons */
 .btn {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  padding: 4px 10px 4px;
+  padding: 4px 10px;
   margin-bottom: 0;
   line-height: 18px;
   color: #454545;
@@ -488,191 +478,283 @@ a.keyword {
   #globalheader-container に背景色や文字色を指定することでirameの中にも色が反映されます。
 */
 #globalheader-container {
-  background-color: #333;
-  color: #fff;
-  position: fixed;
+  background-color: rgba(48, 48, 48, 0.9);
+  color: #999;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
 /* container */
 #container {
-  width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  padding-top: 37px;
+  display: table;
+  talbe-layout: fixed;
+  width: 100%;
 }
 #container #content {
-  display: block;
-  *zoom: 1;
+  display: table-cell;
+  border-left: 84px solid #e7e7e7;
 }
-#container #content:after {
-  display: block;
-  visibility: hidden;
-  font-size: 0;
-  height: 0;
-  clear: both;
-  content: ".";
+#content-inner {
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#content-inner > header#blog-title {
+  display: table-cell;
+  width: 400px;
+  background-color: transparent;
+  background-attachment: fixed!important;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+#wrapper {
+  display: table-cell;
+  vertical-align: top;
 }
 .globalheader-off #container {
   padding-top: 0;
 }
 /* 2カラムレイアウト */
 #main {
-  width: 600px;
-  float: left;
+  background-color: #fff;
+  padding-top: 72px;
 }
 #box2 {
-  width: 300px;
-  float: right;
+  display: table-cell;
+  width: 270px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #33393e;
+  padding: 50px 40px 0;
+  margin: 0;
+  vertical-align: top;
 }
-/* 1カラムにしたい場合は下記のコメントアウトを外してください ----
-
-#main {
-    width: 100%;
-    float: none;
-}
-
-#box2 {
-    width: 100%;
-    float: none;
-}
-
-#box2-inner {
-    width: 960px;
-    .clearfix;
-    overflow: hidden;
-}
-
-.hatena-module {
-    text-align: left;
-    padding-right: 20px;
-    width: 300px;
-    float: left;
-
-    &:nth-child(3n+1) {
-        clear: both;
-    }
-}
-
----- END 1カラム */
 /* header */
-#blog-title {
-  margin: 30px 0;
-  padding: 20px 0;
+#blog-title-inner {
+  position: fixed;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 80px 0 20px;
+  text-align: center;
 }
 #title {
+  width: 360px;
+  font-size: 36px;
+  font-family: Lato;
+  font-weight: 700;
+  padding: 0 20px;
   margin: 0;
+  line-height: 1.35em;
 }
 #title a {
-  color: #454545;
+  color: #fff;
+  -moz-text-shadow: 0 0 0 none;
+  -webkit-text-shadow: 0 0 0 none;
+  text-shadow: 0 0 0 none;
 }
 #blog-description {
-  font-weight: normal;
-  font-size: 80%;
-  margin: 5px 0 0 0;
+  width: 360px;
+  font-size: 1em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1em 20px;
+  margin-top: 20px;
 }
 /* ヘッダ画像を設定したとき */
-.header-image-enable #title {
-  padding-top: 70px;
-}
-.header-image-enable #title,
-.header-image-enable #blog-description {
-  padding-left: 20px;
-}
 /* パンくず（カテゴリーページで表示されます） */
-#top-box {
-  margin: 10px auto 20px;
-  font-size: 90%;
-}
-#top-box .breadcrumb {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
 /* entry */
 .entry {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 92px;
+  padding: 0 48px;
 }
-.entry-header {
-  padding: 0 0 10px 0;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  position: relative;
+.entry:last-child {
+  margin-bottom: 0;
+}
+.entry:last-child > .entry-inner {
+  border-bottom: 0;
+}
+.entry:last-child > .entry-inner:before,
+.entry:last-child > .entry-inner:after {
+  display: none;
+  content: '';
+}
+.entry:before {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  color: #fff;
+  font-family: FontAwesome;
+  font-size: 48px;
+  content: '\f111';
+  width: 100%;
+  text-align: center;
+}
+.entry:after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  color: #d7d7d7;
+  font-family: FontAwesome;
+  font-size: 16px;
+  content: '\f1d8';
+  width: 100%;
+  text-align: center;
+}
+.entry-inner {
+  padding-bottom: 156px;
+  border-bottom: 1px solid #e7e7e7;
 }
 .entry-title {
-  margin: 0;
-  line-height: 1.3;
-  font-size: 160%;
+  margin-bottom: 20px;
+  line-height: 1.35em;
+  font-size: 2em;
+}
+.entry-title a {
+  color: #444;
+}
+.entry-title a:hover {
+  color: #999;
+}
+.entry-title.entry-title-empty {
+  display: none;
 }
 /* 日付 */
 .date {
-  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: -58px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 .date a {
-  color: #1487bd;
+  color: rgba(48, 48, 48, 0.5);
   text-decoration: none;
-  font-size: 90%;
+  line-height: 100%;
+}
+.date span.date-year {
+  position: absolute;
+  top: 0;
+  left: -7px;
+  font-size: 10px;
+}
+.date span.date-month {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 10px;
+}
+.date span.date-month:before {
+  font-size: 10px;
+  content: '\2022';
+  color: rgba(48, 48, 48, 0.3);
+  padding-right: 3px;
+}
+.date span.date-day {
+  position: absolute;
+  top: 42px;
+  left: -26px;
+  font-size: 32px;
+  font-weight: 300;
+  width: 84px;
+  text-align: center;
+}
+.date span.date-day:before {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font-family: FontAwesome;
+  font-size: 72px;
+  content: '\f1db';
+  color: rgba(128, 128, 128, 0.1);
+  width: 84px;
+  text-align: center;
+}
+.date span.hyphen {
+  display: none;
 }
 /* カテゴリ */
 .categories {
+  position: absolute;
+  bottom: 118px;
+  left: 48px;
   margin-top: 10px;
-  font-size: 80%;
 }
-.categories a {
+.categories:before {
+  font-family: FontAwesome;
+  font-size: 16px;
+  content: '\f02b';
+  color: silver;
+  margin-right: .2em;
+}
+.categories a:link,
+.categories a:visited {
   color: #999;
 }
-.categories.no-categories {
+.categories a:hover,
+.categories a:active {
+  color: #444;
+}
+.categories a:before {
+  font-size: 16px;
+  content: '\2022';
+  color: #ccc;
+  margin: 0 .3em 0 .1em;
+}
+.categories a:first-child:before {
+  content: '';
   margin: 0;
+}
+.categories.no-categories {
+  display: none;
 }
 /* 「編集する」ボタン */
 .entry-header-menu {
   position: absolute;
-  bottom: 0px;
-  left: -60px;
+  top: 92px;
+  left: -84px;
 }
 .entry-header-menu a {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  padding: 4px 10px 4px;
+  padding: .5em 0;
   margin-bottom: 0;
-  line-height: 18px;
-  color: #454545;
-  background-color: #fff;
+  width: 84px;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(128, 128, 128, 0.9);
   text-align: center;
   vertical-align: middle;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-radius: 2px;
   background-clip: padding-box;
   cursor: pointer;
   font-size: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  text-decoration: none !important;
+  line-height: 1em;
+  border: 0 none;
+  text-decoration: none!important;
 }
 .entry-header-menu a:hover {
-  background-color: #f5f5f5;
+  background-color: rgba(128, 128, 128, 0.7);
   text-decoration: none !important;
 }
 /* entry-content の中の書式 */
 .entry-content {
-  font-size: 95%;
   line-height: 1.7;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
 }
 .entry-content p {
-  margin: 0 0 1em 0;
+  margin: 1em;
 }
 .entry-content img {
   max-width: 100%;
+  border-radius: 3px;
+  -webkit-transition-property: all 0.2s ease-out;
+  -moz-transition-property: all 0.2s ease-out;
+  -o-transition-property: all 0.2s ease-out;
+  transition-property: all 0.2s ease-out;
 }
 .entry-content h1,
 .entry-content h2,
@@ -757,64 +839,77 @@ a.keyword {
   margin-top: 10px;
 }
 .entry-footer-section {
-  font-size: 80%;
   color: #999;
 }
 .entry-footer-section a {
   color: #999;
+}
+.entry-footer-section a:link,
+.entry-footer-section a:visited {
+  color: #999;
+}
+.entry-footer-section a:hover,
+.entry-footer-section a:active {
+  color: #444;
 }
 .social-buttons,
 .entry-footer-html {
   margin: 10px 0;
 }
 /* コメント */
+.comment-box {
+  text-align: right;
+}
 .comment-box ul {
+  width: 100%;
   list-style: none;
-  margin: 0 0 15px 0;
+  margin: 0 0 30px;
   padding: 0;
-  font-size: 95%;
+  text-align: left;
   line-height: 1.7;
 }
 .comment-box li {
-  padding: 10px 0 10px 60px;
-  border-bottom: 1px solid #ddd;
   position: relative;
-}
-.comment-box li:first-child {
-  border-top: 1px solid #ddd;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
 }
 .comment-box .read-more-comments {
   padding-left: 0;
 }
 .comment-box .hatena-id-icon {
-  position: absolute;
-  top: 10px;
-  left: 0;
   width: 50px !important;
   height: 50px !important;
-  border-top-right-radius: 3px;
+  border-top-right-radius: 50%;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border-radius: 3px;
+  border-radius: 50%;
   background-clip: padding-box;
 }
 .comment-user-name {
-  margin: 0 0 10px 0;
-  font-weight: bold;
+  display: table-cell;
+  width: 20%;
+  font-weight: 700;
+  vertical-align: top;
+  padding-top: 8px;
+}
+.comment-user-name a {
+  display: block;
 }
 .comment-content {
-  font-size: 90%;
-  margin: 0 0 10px 0;
-  word-wrap: break-word;
-}
-.comment-content p {
-  margin: 0 0 10px 0;
+  display: table-cell;
+  width: 80%;
+  font-size: .9em;
+  vertical-align: top;
 }
 .comment-metadata {
-  font-size: 80%;
+  display: table-caption;
+  caption-side: bottom;
+  width: 100%;
+  text-align: right;
   color: #999;
-  margin: 0;
+  padding-bottom: .5em;
 }
 .comment-metadata a {
   color: #999;
@@ -823,7 +918,7 @@ a.keyword {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  padding: 4px 10px 4px;
+  padding: 4px 10px;
   margin-bottom: 0;
   line-height: 18px;
   color: #454545;
@@ -843,77 +938,236 @@ a.keyword {
   border: 1px solid rgba(0, 0, 0, 0.2);
   text-decoration: none !important;
 }
+.leave-comment-title:before {
+  font-family: FontAwesome;
+  content: "\f0e5";
+  font-size: 14px;
+  padding-right: .3em;
+}
 .leave-comment-title:hover {
-  background-color: #f5f5f5;
-  text-decoration: none !important;
+  color: #fff;
+  background-color: #444;
+  text-decoration: none!important;
 }
 /* sidebar */
-#box2 {
-  font-size: 85%;
-  line-height: 1.5;
-}
 .hatena-module {
+  padding-top: 25px;
   margin-bottom: 60px;
 }
+.hatena-module a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.hatena-module a:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
 .hatena-module-title {
-  font-weight: bold;
-  margin-bottom: 15px;
-  font-size: 120%;
+  position: relative;
+  width: 100%;
+  padding-top: 25px;
+  margin-bottom: 20px;
+  text-indent: 40px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.hatena-module-title:before {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  display: block;
+  width: 36px;
+  content: '\f1db';
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 36px;
+  font-family: FontAwesome;
+  text-align: center;
+  text-indent: 0;
+  line-height: 100%;
+}
+.hatena-module-title:after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  display: block;
+  width: 36px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  font-family: FontAwesome;
+  font-weight: 400;
+  text-align: center;
+  text-indent: 0;
+  line-height: 100%;
 }
 .hatena-module-title a {
-  color: #454545;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 .hatena-module-title a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+}
+#box2-inner > .hatena-module:first-child > .hatena-module-title {
+  border-top: 0 none;
+}
+.hatena-module-body {
+  overflow: hidden;
 }
 /* Profile module */
+.hatena-module-profile {
+  position: relative;
+}
+.hatena-module-profile:before {
+  position: absolute;
+  top: 105px;
+  left: -42px;
+  font-family: FontAwesome;
+  font-size: 32px;
+  content: '\f0da';
+  color: #fff;
+}
+.hatena-module-profile .hatena-module-title:after {
+  content: '\f007';
+}
 .hatena-module-profile .profile-icon {
   float: left;
   margin: 0 10px 10px 0;
   border-top-right-radius: 5px;
+  border-top-right-radius: 50%;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border-radius: 5px;
+  border-radius: 50%;
   background-clip: padding-box;
 }
-.hatena-module-profile .id {
+.hatena-module-profile .id a {
   display: block;
-  font-weight: bold;
-  font-size: 110%;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 5px;
-}
-.hatena-module-profile .profile-description {
-  font-size: 90%;
 }
 .hatena-module-profile .profile-description p {
   margin-top: 0;
+}
+.hatena-follow-button {
+  width: 88px;
+  color: rgba(255, 255, 255, 0.25) !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 0 none!important;
+  padding-left: 5px!important;
+  text-align: center;
+}
+.hatena-follow-button:hover {
+  width: 88px!important;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+.hatena-follow-button:before {
+  font-family: FontAwesome;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  content: '\f004';
+}
+.hatena-follow-button:hover:before {
+  color: rgba(0, 0, 0, 0.7);
+}
+.hatena-follow-button span {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 0 none;
+}
+.hatena-follow-button:hover span {
+  color: rgba(0, 0, 0, 0.7) !important;
+  width: 100px;
 }
 /* urllist module
     リンク・最新記事・最近のコメント・月別アーカイブ・カテゴリモジュールは .hatena-urllist という共通の class が振られます
 */
 .hatena-urllist {
   list-style: none;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0;
+  padding: 0;
 }
 .hatena-urllist li {
-  padding: 8px 0;
-  border-bottom: 1px solid #ddd;
-  line-height: 1.5;
+  line-height: 1.7em;
 }
 .hatena-urllist li a {
+  color: rgba(240, 250, 255, 0.6);
   text-decoration: none;
 }
-/* Search module */
-.hatena-module-search-box .search-form {
-  border: 1px solid #ddd;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
+.hatena-module-recent-entries ul li div {
+  font-size: 12px;
+  line-height: 100%;
+}
+.hatena-module-recent-entries .recent-entries-item-inner {
+  padding: 4px 0;
+}
+.hatena-module-recent-entries .hatena-module-title:after {
+  content: '\f005';
+}
+.hatena-module-recent-entries .recent-entries-title-link:before {
+  font-size: 12px;
+  content: '\2022';
+  color: rgba(255, 255, 255, 0.3);
+  padding-right: 0.4em;
+}
+.hatena-module-recent-entries .recent-entries-image {
+  vertical-align: top;
+  margin: 0 4px 0 0;
   border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.hatena-module-archive .hatena-module-title:after {
+  content: '\f133';
+}
+.hatena-module-entries-access-ranking .hatena-module-title:after {
+  content: '\f091';
+}
+.hatena-module-category .hatena-module-title:after {
+  content: '\f02c';
+}
+.hatena-module-category .hatena-module-body li a:before {
+  font-size: 1.1em;
+  content: '\2022';
+  color: rgba(255, 255, 255, 0.3);
+  padding: 0 .3em;
+}
+.hatena-module-recent-comments .hatena-module-title:after {
+  content: '\f086';
+}
+.hatena-module-recent-comments .recent-comment-time {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: normal;
+}
+.hatena-module-recent-comments .user-id img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+.hatena-module-links .hatena-module-title:after {
+  content: '\f135';
+}
+.hatena-module-links .hatena-urllist li:before {
+  content: '\2022';
+  color: rgba(255, 255, 255, 0.3);
+  padding-right: .4em;
+}
+.hatena-module-circles .hatena-module-title:after {
+  content: '\f0c0';
+}
+.hatena-module-html .hatena-module-title:after {
+  content: '\f02e';
+}
+/* Search module */
+.hatena-module-search-box .hatena-module-title {
+  display: none;
+}
+.hatena-module-search-box .hatena-module-title:after {
+  content: '\f002';
+}
+.hatena-module-search-box .search-form {
   background-clip: padding-box;
   width: 100%;
   -moz-box-sizing: border-box;
@@ -921,34 +1175,41 @@ a.keyword {
   position: relative;
 }
 .hatena-module-search-box .search-module-input {
-  padding: 5px;
-  color: #454545;
-  background: none;
-  border: none;
+  padding: 5px 3%;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   outline: none;
   height: 20px;
-  width: 90%;
+  width: 93%;
 }
 .hatena-module-search-box .search-module-button {
-  width: 20px;
-  height: 20px;
-  background: transparent url(http://blog.hatena.ne.jp/images/theme/search.png) no-repeat right center;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.1) url(http://img.f.hatena.ne.jp/images/fotolife/j/jclv/20140722/20140722174438.png) no-repeat center center;
+  filter: hue-rotate();
   border: none;
+  content: '34';
   outline: none;
   text-indent: -9999px;
   position: absolute;
-  top: 5px;
-  right: 5px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  top: 1px;
+  right: 1px;
+  -webkit-transition: .4s ease;
+  -moz-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+  cursor: pointer;
 }
 .hatena-module-search-box .search-module-button:hover {
-  opacity: 0.85;
-  filter: alpha(opacity=85);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 /* Pager */
+.page-entry .entry {
+  margin-bottom: 36px;
+}
 .pager {
-  margin: 1em 0;
+  padding-bottom: 3em;
   display: block;
   *zoom: 1;
 }
@@ -960,68 +1221,149 @@ a.keyword {
   clear: both;
   content: ".";
 }
+.pager a {
+  color: gray;
+}
+.pager a:hover {
+  color: #444;
+}
 .pager .pager-prev {
   float: left;
-  text-align: left;
-  width: 45%;
+  text-align: center;
+  width: 50%;
+}
+.pager .pager-prev a:before {
+  display: block;
+  font-family: FontAwesome;
+  font-size: 64px;
+  content: '\f137';
+  padding-bottom: 5px;
 }
 .pager .pager-next {
   float: right;
-  text-align: right;
-  width: 45%;
+  text-align: center;
+  width: 50%;
+}
+.pager .pager-next a:before {
+  display: block;
+  font-family: FontAwesome;
+  font-size: 64px;
+  content: '\f138';
+  padding-bottom: 5px;
+}
+.pager .pager-arrow {
+  display: none;
+}
+#bottom-editarea {
+  position: fixed;
+  bottom: 60px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+#bottom-editarea a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 /* Footer */
 #footer {
-  padding: 30px 0;
-  text-align: center;
-  color: #999;
-  line-height: 1.5;
-  font-size: 80%;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
 }
 #footer p {
   margin: 0;
 }
+#footer img {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
 #footer a {
-  color: #999;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 }
 /* About ページ */
+.page-about #container #content {
+  border-left: 0 none;
+}
+.page-about dl {
+  position: relative;
+}
+.page-about dl:before {
+  position: absolute;
+  top: -8px;
+  color: #666;
+  content: '\f02d';
+  font-family: FontAwesome;
+  font-size: 32px;
+  padding-right: .2em;
+}
+.page-about dl > dt:first-child {
+  display: none;
+}
 .page-about dt {
-  font-size: 16px;
-  font-weight: bold;
-  border-bottom: 1px solid #dfdfdf;
-  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+  padding-top: 1em;
+  border-top: 1px solid #e7e7e7;
+}
+.page-about dt :before {
+  font-family: FontAwesome;
+  font-size: 12px;
+  content: '\f107';
+  padding-right: .5em;
+  color: silver;
 }
 .page-about dd {
-  margin-left: 0;
-  margin-bottom: 30px;
+  font-size: 14px;
+  padding: .5em 0 0;
+  margin-bottom: 3em;
 }
 /* archive ページ */
+.page-archive .archive-entries #main-inner {
+  padding-top: 30px;
+}
+.page-archive .archive-entries #main-inner > h2 {
+  color: #666;
+  font-weight: 400;
+  padding-bottom: 2em;
+}
+.page-archive .archive-entries #container #content {
+  border-left: 30px solid #e7e7e7;
+}
 .page-archive .archive-entries .archive-entry {
   margin-bottom: 3em;
 }
-.page-archive .archive-entries .entry-title {
-  font-size: 130%;
-  margin: 0 0 .5em;
+.page-archive .archive-entries #main {
+  padding: 0 48px 0 120px;
 }
-.page-archive .archive-entries .categories {
-  margin: 0 0 .5em;
+.page-archive .archive-entries .date {
+  position: absolute;
+  top: 0;
+  left: -142px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 400;
 }
-.page-archive .archive-entries .entry-description {
-  margin: 0 0 1em;
-  line-height: 1.7em;
-  font-size: 95%;
+.page-archive .archive-entries .date :before {
+  font-family: FontAwesome;
+  font-size: 16px;
+  content: '\f017';
+  padding-right: 20px;
+  margin-top: 1px;
+  color: #c7c7c7;
 }
-.page-archive .categories a {
-  color: #fff;
-  font-size: 70%;
-  background: #aaa;
-  padding: 3px 5px;
+.page-archive .archive-entries .date .entry-thumb {
   border-radius: 3px;
-  text-decoration: none;
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  margin-right: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
 }
 /*  import media queries */
 /* Media Queries - Retina Display */

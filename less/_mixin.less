@@ -64,7 +64,10 @@
 }
 
 .transition(@duration:0.2s, @ease:ease-out) {
-    transition: all @duration @ease;
+    -webkit-transition-property: all @duration @ease;
+    -moz-transition-property: all @duration @ease;
+    -o-transition-property: all @duration @ease;
+    transition-property: all @duration @ease;
 }
 
 .transition-duration(@duration: 0.2s) {
