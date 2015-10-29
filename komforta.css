@@ -1433,13 +1433,221 @@ a.keyword {
 /* Media Queries - Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
   #container {
-    width: 724px;
+    position: static;
+    display: block;
+    width: 100%;
+  }
+  #container-inner {
+    position: static;
+    display: block;
+    width: 100%;
+  }
+  #container-inner > header#blog-title {
+    position: static;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #blog-title-inner {
+    position: static;
+    width: 100%;
+    margin: 0;
+    padding-top: 64px;
+    text-align: center;
+  }
+  #title {
+    width: 90%;
+    padding: 0 5%;
+  }
+  #blog-description {
+    width: 90%;
+    font-size: 1em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1em 5% 0;
+    margin-top: 0;
+  }
+  #container #content {
+    display: block;
+    border-left: 0 none;
+    margin-top: 0;
+  }
+  #content-inner {
+    display: block;
+    width: 100%;
+  }
+  #wrapper {
+    display: block;
+    padding-top: 0;
   }
   #main {
-    width: 460px;
+    border-left: 0 none;
+    padding-top: 32px;
+  }
+  .categories {
+    bottom: 118px;
+    left: 12px;
+  }
+  .entry-title {
+    text-align: center;
+    padding-bottom: .5em;
+    margin: 0;
+    line-height: 1.5em;
+    font-size: 2em;
   }
   #box2 {
-    width: 245px;
+    position: static;
+    display: block;
+    float: left;
+    width: 100%;
+    color: #9ba4ae;
+    padding: 0;
+  }
+  #box2-inner {
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .date {
+    top: -48px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  .entry {
+    padding: 0 20px;
+  }
+  .entry:first-child {
+    margin-top: 64px;
+  }
+  .entry:first-child .date:before {
+    content: '';
+  }
+  .date a {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    line-height: 100%;
+  }
+  .date span.date-year {
+    position: static;
+    font-size: 12px;
+  }
+  .date span.date-month {
+    position: static;
+    font-size: 12px;
+  }
+  .date span.date-day {
+    position: static;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .date span.date-month:before,
+  .date span.date-day:before {
+    position: static;
+    width: auto;
+    text-align: left;
+    color: #ccc;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    content: '\2022';
+    padding: 0 4px;
+  }
+  .hatena-module {
+    width: 94%;
+    overflow: hidden;
+    float: left;
+    padding: 0;
+    margin: 0 3% 25px;
+  }
+  .hatena-module-title {
+    padding: 25px 0 20px;
+    margin: 0 0 15px;
+    border-top: 0 none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .hatena-module-profile:before {
+    position: static;
+    content: '';
+  }
+  .hatena-module-search-box .search-form {
+    max-width: 240px;
+    margin-top: 25px;
+  }
+  #bottom-editarea {
+    float: left;
+    width: 100%;
+    position: static;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #33393e;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  #bottom-editarea a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  }
+  #footer {
+    display: block;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #33393e;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+  }
+  #footer-inner {
+    padding: 2em 0;
+  }
+  .page-archive #container #content {
+    border-left: 0 none;
+  }
+  .page-archive #main {
+    border-left: 0 none;
+    margin: 0;
+    padding: 0 20px;
+  }
+  .page-archive .archive-entry {
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .page-archive .archive-entries .date {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: 400;
+  }
+  .page-archive .archive-entries .date:before {
+    display: none;
+    content: '';
+    padding: 0;
+    margin: 0;
+  }
+  .page-archive .archive-entries .archive-entry {
+    position: static;
+    padding-bottom: 64px;
+  }
+  .page-archive .archive-entries .entry-title {
+    font-size: 18px;
+    margin-bottom: 0.5em;
+  }
+  .page-archive .archive-entries .entry-description {
+    color: #999;
+    margin: 1em 0;
+  }
+  .archive-entries .entry-thumb {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+  }
+  .page-archive #footer {
+    display: none;
   }
 }
 /* Media Queries - Small Tablet & Smartphone */
