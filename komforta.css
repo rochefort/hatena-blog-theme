@@ -1417,6 +1417,9 @@ a.keyword {
 .page-archive .archive-entries .archive-entry {
   margin-bottom: 3em;
 }
+.page-archive .archive-entries .archive-entry .categories {
+  position: static;
+}
 .page-archive .archive-entries #main {
   padding: 0 48px 0 120px;
 }
