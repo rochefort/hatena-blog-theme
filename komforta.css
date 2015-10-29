@@ -1308,7 +1308,6 @@ a.keyword {
   width: 50%;
 }
 .pager .pager-prev a:before {
-  display: block;
   font-family: FontAwesome;
   font-size: 64px;
   content: '\f137';
