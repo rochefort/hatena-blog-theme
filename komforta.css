@@ -1025,6 +1025,8 @@ a.keyword {
 /* Profile module */
 .hatena-module-profile {
   position: relative;
+  padding-top: 0;
+  margin-bottom: 0;
 }
 .hatena-module-profile:before {
   position: absolute;
@@ -1183,6 +1185,9 @@ a.keyword {
   content: '\f02e';
 }
 /* Search module */
+.hatena-module-search-box {
+  padding-top: 0;
+}
 .hatena-module-search-box .hatena-module-title {
   display: none;
 }
