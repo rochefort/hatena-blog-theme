@@ -523,6 +523,9 @@ a.keyword {
   background-color: #fff;
   padding-top: 72px;
 }
+#main-inner {
+  padding-top: 30px;
+}
 #box2 {
   display: table-cell;
   width: 270px;
@@ -538,7 +541,7 @@ a.keyword {
   width: 400px;
   background-color: rgba(0, 0, 0, 0.2);
   margin: 0;
-  padding: 80px 0 20px;
+  padding: 40px 0 20px;
   text-align: center;
 }
 #title {
@@ -952,7 +955,7 @@ a.keyword {
 /* sidebar */
 .hatena-module {
   padding-top: 25px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .hatena-module a {
   color: rgba(255, 255, 255, 0.7);
@@ -1098,19 +1101,24 @@ a.keyword {
 }
 .hatena-module-recent-entries ul li div {
   font-size: 12px;
-  line-height: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 1.7em;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  /* Opera9,10対応 */
 }
-.hatena-module-recent-entries .recent-entries-item-inner {
-  padding: 4px 0;
-}
-.hatena-module-recent-entries .hatena-module-title:after {
-  content: '\f005';
-}
-.hatena-module-recent-entries .recent-entries-title-link:before {
+.hatena-module-recent-entries .recent-entries-item-inner:before {
   font-size: 12px;
   content: '\2022';
   color: rgba(255, 255, 255, 0.3);
-  padding-right: 0.4em;
+  padding-right: .4em;
+}
+.hatena-module-recent-entries .hatena-module-title:after {
+  content: '\f005';
 }
 .hatena-module-recent-entries .recent-entries-image {
   vertical-align: top;
@@ -1125,12 +1133,21 @@ a.keyword {
 .hatena-module-entries-access-ranking .hatena-module-title:after {
   content: '\f091';
 }
+.hatena-module-category ul li {
+  float: left;
+  margin-left: 1em;
+  padding: 0.03em;
+}
+.hatena-module-category:after {
+  clear: both;
+  content: "";
+  display: block;
+}
 .hatena-module-category .hatena-module-title:after {
   content: '\f02c';
 }
 .hatena-module-category .hatena-module-body li a:before {
   font-size: 1.1em;
-  content: '\2022';
   color: rgba(255, 255, 255, 0.3);
   padding: 0 .3em;
 }
@@ -1203,6 +1220,46 @@ a.keyword {
 }
 .hatena-module-search-box .search-module-button:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+/* top 5 hatebu */
+#hatena-bookmark-widget0 {
+  margin-top: -10px;
+}
+/* hide title */
+.hatena-bookmark-widget-title {
+  display: none;
+}
+/* ellipsis */
+.hatena-bookmark-widget-body ul {
+  padding-left: 0;
+}
+.hatena-bookmark-widget-body ul li {
+  line-height: 1.7em;
+  padding-right: 60px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  /* Opera9,10対応 */
+}
+.hatena-bookmark-widget-body ul li:before {
+  content: '\2022';
+  color: rgba(255, 255, 255, 0.3);
+  padding-right: 3px;
+}
+.hatena-bookmark-count {
+  position: absolute;
+  right: 0px;
+}
+.hatena-bookmark-count strong a {
+  color: #FF0505;
+  background-color: #FFCBCB;
+  border-radius: 1px;
+  padding: 0 1px;
+}
+.hatena-bookmark-widget-footer {
+  display: none;
 }
 /* Pager */
 .page-entry .entry {
