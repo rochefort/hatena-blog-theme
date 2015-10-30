@@ -676,7 +676,7 @@ a {
     margin-bottom: 20px;
     text-indent: 40px;
     font-size: 14px;
-    color: rgba(255, 255, 255, .5);
+    color: @left-text;
     border-top: 1px solid rgba(255, 255, 255, .1);
 
     &:before {
@@ -710,7 +710,7 @@ a {
     }
 
     a {
-        color: rgba(255, 255, 255, .5);
+        color: @left-text;
         text-decoration: none;
         &:hover {
             text-decoration: none;
@@ -794,7 +794,7 @@ a {
     &:before {
       font-family: FontAwesome;
       font-size: 10px;
-      color: rgba(255, 255, 255, .5);
+      color: @left-text;
       content: '\f004';
     }
 
@@ -908,7 +908,7 @@ a {
     }
 
     .recent-comment-time {
-        color: rgba(255, 255, 255, .5);
+        color: @left-text;
         font-style: normal
     }
 
@@ -1107,7 +1107,7 @@ a {
     position: fixed;
     bottom: 60px;
     left: 20px;
-    color: rgba(255, 255, 255, .5);
+    color: @left-text;
 
     a {
         color: rgba(255, 255, 255, .75);
@@ -1122,9 +1122,9 @@ a {
 #footer {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    left: 12px;
     width: 100%;
-    color: rgba(255, 255, 255, .5);
+    color: @left-text;
 
     p {
         margin: 0;
@@ -1135,10 +1135,31 @@ a {
     }
 
     a {
-        color: rgba(255, 255, 255, .5);
+        color: @left-text;
         text-decoration: none;
     }
 
+    address {
+        img {
+            margin-left: 20px
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+    #footer-inner {
+        font-size: 10px;
+    }
+
+    .services {
+        color: rgba(48, 48, 48, .5);
+        a {
+            display: block;
+            color: rgba(48, 48, 48, .5);
+        }
+    }
 }
 
 /* About ページ */

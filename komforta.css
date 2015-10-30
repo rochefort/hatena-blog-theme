@@ -407,9 +407,10 @@ th {
 /* Link text color(hover) */
 /* Link text color(hover) */
 /* Border color */
-/* button text color*/
+/* button text color */
 /* button background */
 /* button hover backgroud */
+/* left side bar text color */
 /*  import font */
 /* Common */
 html,
@@ -1345,7 +1346,7 @@ a.keyword {
 #footer {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  left: 12px;
   width: 100%;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -1363,6 +1364,22 @@ a.keyword {
 #footer a {
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
+}
+#footer address img {
+  margin-left: 20px;
+}
+#footer address span {
+  display: none;
+}
+#footer #footer-inner {
+  font-size: 10px;
+}
+#footer .services {
+  color: rgba(48, 48, 48, 0.5);
+}
+#footer .services a {
+  display: block;
+  color: rgba(48, 48, 48, 0.5);
 }
 /* About ページ */
 .page-about #container #content {
