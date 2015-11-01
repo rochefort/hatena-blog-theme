@@ -555,9 +555,10 @@ a.keyword {
   font-size: 36px;
   font-family: Lato;
   font-weight: 700;
-  padding: 0 20px;
+  padding: 5px 17px;
   margin: 0;
   line-height: 1.35em;
+  height: 40px;
 }
 #title a {
   color: #fff;
