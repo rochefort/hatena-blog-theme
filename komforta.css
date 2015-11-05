@@ -761,6 +761,7 @@ a.keyword {
 .entry-content img {
   max-width: 100%;
   border-radius: 3px;
+  border: 1px solid #ddd;
   -webkit-transition-property: all 0.2s ease-out;
   -moz-transition-property: all 0.2s ease-out;
   -o-transition-property: all 0.2s ease-out;
