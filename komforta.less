@@ -460,15 +460,26 @@ a {
 
     h1 {
         font-size: 160%;
-        border-bottom: 1px solid #ddd;
     }
 
     h2 {
         font-size: 150%;
+        border-bottom: 1px solid #ddd;
+        &:before {
+            content: '\f135';
+            font-family: FontAwesome;
+            padding-right: 4px;
+        }
     }
 
     h3 {
         font-size: 140%;
+        border-bottom: 1px solid #ddd;
+        &:before {
+            content: '\f197';
+            font-family: FontAwesome;
+            padding-right: 4px;
+        }
     }
 
     h4 {

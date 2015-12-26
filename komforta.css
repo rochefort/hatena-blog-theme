@@ -778,13 +778,24 @@ a.keyword {
 }
 .entry-content h1 {
   font-size: 160%;
-  border-bottom: 1px solid #ddd;
 }
 .entry-content h2 {
   font-size: 150%;
+  border-bottom: 1px solid #ddd;
+}
+.entry-content h2:before {
+  content: '\f135';
+  font-family: FontAwesome;
+  padding-right: 4px;
 }
 .entry-content h3 {
   font-size: 140%;
+  border-bottom: 1px solid #ddd;
+}
+.entry-content h3:before {
+  content: '\f197';
+  font-family: FontAwesome;
+  padding-right: 4px;
 }
 .entry-content h4 {
   font-size: 130%;
