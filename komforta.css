@@ -784,18 +784,19 @@ a.keyword {
   border-bottom: 1px solid #ddd;
 }
 .entry-content h2:before {
-  content: '\f135';
+  content: '\f197';
   font-family: FontAwesome;
   padding-right: 4px;
+  color: #be922d;
 }
 .entry-content h3 {
   font-size: 140%;
   border-bottom: 1px solid #ddd;
 }
 .entry-content h3:before {
-  content: '\f197';
+  content: '\f00c';
   font-family: FontAwesome;
-  padding-right: 4px;
+  padding-right: 2px;
 }
 .entry-content h4 {
   font-size: 130%;
