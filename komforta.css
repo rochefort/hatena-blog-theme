@@ -784,7 +784,7 @@ a.keyword {
   border-bottom: 1px solid #ddd;
 }
 .entry-content h2:before {
-  content: '\f197';
+  content: '\f00c';
   font-family: FontAwesome;
   padding-right: 4px;
   color: #be922d;
