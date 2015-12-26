@@ -1,9 +1,4 @@
 @charset "utf-8";
-@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
-@import "http://fonts.googleapis.com/css?family=Lato:300,700|Titillium+Web:200,400,700|Open+Sans:400,700";
-/* <system section="theme" selected="12921228815728685960"> */
-/*@import url("http://hatenablog.com/theme/12921228815728685960.css");*/
-/* </system> */
 /*
   Theme: Komforta
   Author: rochefort
@@ -17,6 +12,29 @@
 
   Licensed under the MIT license.
 */
+/*
+ * "font-awesome" is lisenced under the SIL Open Font License 1.1
+ * https://fortawesome.github.io/Font-Awesome
+ * http://scripts.sil.org/OFL
+ *
+ * "Latao" is lisenced under the SIL Open Font License 1.1
+ * http://fonts.googleapis.com
+ * https://www.google.com/fonts/attribution
+ * http://scripts.sil.org/OFL
+ *
+ * "Titillium Web" is lisenced under the SIL Open Font License 1.1
+ * http://fonts.googleapis.com
+ * https://www.google.com/fonts/attribution
+ * http://scripts.sil.org/OFL
+ *
+ * "Titillium Web" is lisenced under the Apache License, version 2.0
+ * http://fonts.googleapis.com
+ * https://www.google.com/fonts/attribution
+ * http://www.apache.org/licenses/LICENSE-2.0.html
+ */
+/* <system section="theme" selected="12921228815728685960"> */
+/*@import url("http://hatenablog.com/theme/12921228815728685960.css");*/
+/* </system> */
 /*  import normalize */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
