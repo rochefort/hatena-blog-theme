@@ -814,6 +814,7 @@ a.keyword {
   content: '\f00c';
   font-family: FontAwesome;
   padding-right: 2px;
+  padding-left: 1em;
 }
 .entry-content h4 {
   font-size: 130%;
