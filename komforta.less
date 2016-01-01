@@ -471,38 +471,43 @@ a {
     }
 
     h1,h2,h3,h4,h5,h6 {
+        border-bottom: 1px solid #ddd;
         margin: 1.3em 0 0.8em 0;
         line-height: 1.5;
     }
 
     h1 {
-        font-size: 160%;
+        font-size: 180%;
     }
 
     h2 {
         font-size: 150%;
-        border-bottom: 1px solid #ddd;
+        padding-top: 20px;
+        margin-left: -1em;
         &:before {
+            color: rgb(190, 146, 45);
             content: '\f00c';
             font-family: FontAwesome;
             padding-right: 4px;
-            color: rgb(190, 146, 45);
         }
     }
 
     h3 {
         font-size: 140%;
-        border-bottom: 1px solid #ddd;
         &:before {
+            color: rgb(8, 48, 19);
             content: '\f00c';
             font-family: FontAwesome;
-            padding-right: 2px;
-            padding-left: 1em;
+            padding-right: 3px;
         }
     }
 
     h4 {
         font-size: 130%;
+        &:before {
+            content: '●';
+            padding-right: 3px;
+        }
     }
 
     h5 {
