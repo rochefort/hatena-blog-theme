@@ -557,7 +557,7 @@ h1 {
   width: 270px;
   color: rgba(255, 255, 255, 0.7);
   background-color: #33393e;
-  padding: 50px 40px 0;
+  padding: 100px 40px 0;
   margin: 0;
   vertical-align: top;
 }
@@ -575,7 +575,7 @@ h1 {
   font-size: 36px;
   font-family: Lato;
   font-weight: 700;
-  padding: 5px 17px;
+  padding: 5px 0 0 55px;
   margin: 0;
   line-height: 1.35em;
   height: 40px;
