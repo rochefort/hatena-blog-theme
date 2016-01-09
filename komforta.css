@@ -643,6 +643,7 @@ h1 {
 .entry-header {
   border-top: 4px solid #666;
   border-bottom: 4px solid #666;
+  margin-bottom: 20px;
 }
 .entry-title {
   margin-bottom: 5px;
@@ -776,6 +777,7 @@ h1 {
   font-size: 15px;
   line-height: 1.7;
   padding-bottom: 1em;
+  padding-left: 10px;
 }
 .entry-content p {
   margin: 1.5em 0 2em 0;
@@ -1166,6 +1168,10 @@ h1 {
 .hatena-urllist li a {
   color: rgba(240, 250, 255, 0.6);
   text-decoration: none;
+}
+.hatena-urllist .hatebu-count {
+  position: relative;
+  top: 2px;
 }
 .hatena-module-recent-entries ul li div {
   font-size: 12px;
