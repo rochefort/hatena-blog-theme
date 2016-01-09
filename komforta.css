@@ -704,7 +704,7 @@ h1 {
   font-family: FontAwesome;
   font-size: 72px;
   content: '\f1db';
-  color: rgba(128, 128, 128, 0.1);
+  color: rgba(128, 128, 128, 0.2);
   width: 84px;
   text-align: center;
 }
@@ -1472,6 +1472,12 @@ h1 {
   margin-bottom: 3em;
 }
 /* archive ページ */
+.page-archive .archive-entries {
+  padding: 0 20px;
+}
+.page-archive .archive-entries .entry-title {
+  border-bottom: 1px solid #ccc;
+}
 .page-archive .archive-entries #main-inner {
   padding-top: 30px;
 }
