@@ -667,13 +667,13 @@ a.keyword {
   position: absolute;
   top: 0;
   left: -7px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .date span.date-month {
   position: absolute;
   top: 0;
   left: 20px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .date span.date-month:before {
   font-size: 10px;
