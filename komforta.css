@@ -457,6 +457,9 @@ a.keyword {
   text-decoration: none;
   color: #444;
 }
+h1 {
+  font-size: 150%;
+}
 /* Buttons */
 .btn {
   display: inline-block;
@@ -597,7 +600,7 @@ a.keyword {
 .entry {
   position: relative;
   margin-bottom: 92px;
-  padding: 0 48px;
+  padding: 0 24px;
 }
 .entry:last-child {
   margin-bottom: 0;
@@ -635,11 +638,15 @@ a.keyword {
 .entry-inner {
   padding-bottom: 156px;
   border-bottom: 1px solid #e7e7e7;
+  margin-top: 20px;
+}
+.entry-header {
+  border-top: 4px solid #666;
+  border-bottom: 4px solid #666;
 }
 .entry-title {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   line-height: 1.35em;
-  font-size: 2em;
 }
 .entry-title a {
   color: #444;
@@ -706,7 +713,7 @@ a.keyword {
 }
 /* カテゴリ */
 .categories {
-  margin-top: -10px;
+  margin-bottom: 5px;
 }
 .categories:before {
   font-family: FontAwesome;
@@ -792,12 +799,11 @@ a.keyword {
   line-height: 1.5;
 }
 .entry-content h1 {
-  font-size: 180%;
+  font-size: 150%;
 }
 .entry-content h2 {
   font-size: 150%;
   padding-top: 20px;
-  margin-left: -1em;
 }
 .entry-content h2:before {
   color: #be922d;
@@ -807,6 +813,7 @@ a.keyword {
 }
 .entry-content h3 {
   font-size: 140%;
+  margin-left: 1em;
 }
 .entry-content h3:before {
   color: #083013;

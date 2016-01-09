@@ -77,6 +77,10 @@ a {
     }
 }
 
+h1 {
+    font-size: 150%;
+}
+
 /* Buttons */
 
 .btn {
@@ -257,7 +261,7 @@ a {
 .entry {
     position: relative;
     margin-bottom: 92px;
-    padding: 0 48px;
+    padding: 0 24px;
 
     &:last-child {
         margin-bottom: 0;
@@ -296,21 +300,26 @@ a {
 }
 .entry-inner {
     padding-bottom: 156px;
-    border-bottom: 1px solid #e7e7e7
+    border-bottom: 1px solid #e7e7e7;
+    margin-top: 20px;
+}
+
+.entry-header {
+    border-top: 4px solid #666;
+    border-bottom: 4px solid #666;
 }
 
 .entry-title {
-  margin-bottom: 20px;
-  line-height: 1.35em;
-  font-size: 2em;
-
-  a {
-    color: #444;
-
-    &:hover {
-      color: #999
+    margin-bottom: 5px;
+    line-height: 1.35em;
+    
+    a {
+        color: #444;
+        
+        &:hover {
+            color: #999
+        }
     }
-  }
 }
 .entry-title.entry-title-empty {
   display: none
@@ -384,7 +393,7 @@ a {
 /* カテゴリ */
 
 .categories {
-    margin-top: -10px;
+    margin-bottom: 5px;
 
     &:before {
         font-family: FontAwesome;
@@ -474,13 +483,12 @@ a {
     }
 
     h1 {
-        font-size: 180%;
+        font-size: 150%;
     }
 
     h2 {
         font-size: 150%;
         padding-top: 20px;
-        margin-left: -1em;
         &:before {
             color: rgb(190, 146, 45);
             content: '\f00c';
@@ -491,6 +499,7 @@ a {
 
     h3 {
         font-size: 140%;
+        margin-left: 1em;
         &:before {
             color: rgb(8, 48, 19);
             content: '\f00c';
