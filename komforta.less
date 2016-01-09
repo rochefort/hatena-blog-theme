@@ -57,7 +57,6 @@ body {
     font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'MS PGothic',sans-serif;
     color: @text;
     background-color: @background;
-    font-size:.9em;
 }
 
 a {
@@ -462,11 +461,12 @@ h1 {
 /* entry-content の中の書式 */
 
 .entry-content {
+    font-size: 15px;
     line-height: 1.7;
     padding-bottom: 1em;
 
     p {
-        margin: 1em;
+        margin: 1.5em 0 2em 0;
     }
 
     img {
@@ -487,21 +487,19 @@ h1 {
     }
 
     h2 {
-        font-size: 150%;
-        padding-top: 20px;
-        &:before {
-            color: rgb(190, 146, 45);
-            content: '\f00c';
-            font-family: FontAwesome;
-            padding-right: 4px;
-        }
+        font-size: 130%;
+        font-weight: bold;
+        margin: 1em 0 0.5em 0;
+        padding: 4px 10px;
+        border-left: solid 10px rgb(190, 146, 45);
+        border-bottom-style: none;
+        background: rgba(245,245,245,0.8);
     }
 
     h3 {
-        font-size: 140%;
-        margin-left: 1em;
+        font-size: 130%;
         &:before {
-            color: rgb(8, 48, 19);
+            color: rgb(190, 146, 45);
             content: '\f00c';
             font-family: FontAwesome;
             padding-right: 3px;
@@ -509,7 +507,7 @@ h1 {
     }
 
     h4 {
-        font-size: 130%;
+        font-size: 120%;
         &:before {
             content: '●';
             padding-right: 3px;

@@ -435,7 +435,6 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
   color: #444;
   background-color: #fff;
-  font-size: .9em;
 }
 a {
   color: #6a708f;
@@ -773,11 +772,12 @@ h1 {
 }
 /* entry-content の中の書式 */
 .entry-content {
+  font-size: 15px;
   line-height: 1.7;
   padding-bottom: 1em;
 }
 .entry-content p {
-  margin: 1em;
+  margin: 1.5em 0 2em 0;
 }
 .entry-content img {
   max-width: 100%;
@@ -802,27 +802,25 @@ h1 {
   font-size: 150%;
 }
 .entry-content h2 {
-  font-size: 150%;
-  padding-top: 20px;
-}
-.entry-content h2:before {
-  color: #be922d;
-  content: '\f00c';
-  font-family: FontAwesome;
-  padding-right: 4px;
+  font-size: 130%;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+  padding: 4px 10px;
+  border-left: solid 10px #be922d;
+  border-bottom-style: none;
+  background: rgba(245, 245, 245, 0.8);
 }
 .entry-content h3 {
-  font-size: 140%;
-  margin-left: 1em;
+  font-size: 130%;
 }
 .entry-content h3:before {
-  color: #083013;
+  color: #be922d;
   content: '\f00c';
   font-family: FontAwesome;
   padding-right: 3px;
 }
 .entry-content h4 {
-  font-size: 130%;
+  font-size: 120%;
 }
 .entry-content h4:before {
   content: '●';
