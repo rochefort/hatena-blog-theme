@@ -1197,7 +1197,6 @@ h1 {
   /* Opera9,10対応 */
 }
 .hatena-module-recent-entries .recent-entries li a:before {
-  font-size: 12px;
   content: '\2022';
   color: rgba(255, 255, 255, 0.3);
   padding-right: .4em;
@@ -1268,6 +1267,11 @@ h1 {
 }
 .hatena-module-html .hatena-module-title:after {
   content: '\f02e';
+}
+.hatena-module-html .hatena-urllist li:before {
+  content: '\2022';
+  color: rgba(255, 255, 255, 0.3);
+  padding-right: .4em;
 }
 /* Search module */
 .hatena-module-search-box {
@@ -1341,7 +1345,7 @@ h1 {
 .hatena-bookmark-widget-body ul li:before {
   content: '\2022';
   color: rgba(255, 255, 255, 0.3);
-  padding-right: 3px;
+  padding-right: .4em;
 }
 .hatena-bookmark-count {
   position: absolute;

@@ -917,9 +917,8 @@ h1 {
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 -o-text-overflow: ellipsis; /* Opera9,10対応 */
-                
+
                 &:before {
-                    font-size: 12px;
                     content: '\2022';
                     color: rgba(255, 255, 255, .3);
                     padding-right: .4em;
@@ -1016,8 +1015,16 @@ h1 {
     content: '\f0c0';
 }
 
-.hatena-module-html .hatena-module-title:after {
-    content: '\f02e';
+.hatena-module-html {
+    .hatena-module-title:after {
+        content: '\f02e';
+    }
+
+    .hatena-urllist li:before {
+        content: '\2022';
+        color: rgba(255, 255, 255, .3);
+        padding-right: .4em;
+    }
 }
 
 /* Search module */
@@ -1103,7 +1110,7 @@ h1 {
             &:before {
                 content: '\2022';
                 color: rgba(255,255,255,.3);
-                padding-right: 3px;
+                padding-right: .4em;
             }
         }
     }
