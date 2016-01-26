@@ -907,13 +907,33 @@ h1 {
         text-overflow: ellipsis;
         -o-text-overflow: ellipsis; /* Opera9,10対応 */
     }
-
+    .recent-entries{
+        li {
+            a {
+                display: block;
+                padding-right: 45px;
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis; /* Opera9,10対応 */
+                
+                &:before {
+                    font-size: 12px;
+                    content: '\2022';
+                    color: rgba(255, 255, 255, .3);
+                    padding-right: .4em;
+                }
+            }
+        }
+    }
     .recent-entries-item-inner {
-        &:before {
-            font-size: 12px;
-            content: '\2022';
-            color: rgba(255, 255, 255, .3);
-            padding-right: .4em;
+        img.hatebu-count {
+            position: absolute;
+            top: 1px;
+            right: 4px;
+            border-left: 5px solid #33393e;
+            border-top: 3px solid #33393e;
         }
     }
 

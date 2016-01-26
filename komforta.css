@@ -1186,11 +1186,28 @@ h1 {
   -o-text-overflow: ellipsis;
   /* Opera9,10対応 */
 }
-.hatena-module-recent-entries .recent-entries-item-inner:before {
+.hatena-module-recent-entries .recent-entries li a {
+  display: block;
+  padding-right: 45px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  /* Opera9,10対応 */
+}
+.hatena-module-recent-entries .recent-entries li a:before {
   font-size: 12px;
   content: '\2022';
   color: rgba(255, 255, 255, 0.3);
   padding-right: .4em;
+}
+.hatena-module-recent-entries .recent-entries-item-inner img.hatebu-count {
+  position: absolute;
+  top: 1px;
+  right: 4px;
+  border-left: 5px solid #33393e;
+  border-top: 3px solid #33393e;
 }
 .hatena-module-recent-entries .hatena-module-title:after {
   content: '\f005';
