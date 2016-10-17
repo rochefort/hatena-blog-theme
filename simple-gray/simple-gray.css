@@ -45,11 +45,6 @@ a {
     -o-text-overflow: ellipsis;
     /* Opera9,10対応 */
 }
-.hatena-bookmark-widget-body ul li:before {
-    content: '\2022';
-    color: rgba(255, 255, 255, 0.3);
-    padding-right: .4em;
-}
 .hatena-bookmark-count {
     position: absolute;
     right: 0px;
