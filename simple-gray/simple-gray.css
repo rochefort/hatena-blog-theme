@@ -25,9 +25,11 @@ a {
 #hatena-bookmark-widget0 {
     margin-top: -10px;
 }
-/* hide title */
+/* move title icon */
 .hatena-bookmark-widget-title {
-    /*display: none;*/
+    position: relative;
+    left: 100px;
+    top: -24px;
 }
 /* ellipsis */
 .hatena-bookmark-widget-body ul {
