@@ -20,6 +20,10 @@ a {
     font-size: 95%;
 }
 
+.entry-content img {
+    border : 1px solid gray;
+}
+
 /* top 5 hatebu */
 
 #hatena-bookmark-widget0 {
