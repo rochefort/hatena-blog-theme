@@ -19,7 +19,15 @@ a {
 .entry-content {
     font-size: 95%;
 }
-
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5 {
+    margin-bottom: 0;
+}
+.entry-content p {
+    margin-top: 0;
+}
 .entry-content img {
     border : 1px solid gray;
 }
