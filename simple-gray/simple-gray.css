@@ -51,7 +51,7 @@ a {
 }
 .hatena-bookmark-count {
     position: absolute;
-    right: 0px;
+    right: 0;
 }
 .hatena-bookmark-count strong a {
     color: #FF0505;
