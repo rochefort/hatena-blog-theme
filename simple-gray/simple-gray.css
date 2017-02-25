@@ -63,3 +63,8 @@ a {
 .hatena-bookmark-widget-footer {
     display: none;
 }
+
+.feedly-link {
+  margin-top: -38px;
+  padding-left: 86px;
+}
