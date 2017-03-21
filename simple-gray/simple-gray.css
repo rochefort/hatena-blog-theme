@@ -2,6 +2,16 @@ a {
     text-decoration: none;
 }
 
+#blog-title-content {
+    background: url(https://s3-ap-northeast-1.amazonaws.com/grass-graph/rochefort.png) white bottom center no-repeat;
+    height: 112px;
+    margin-bottom: 20px;
+}
+
+#title {
+    padding-top: 45px;
+}
+
 .entry-header {
     border-top: 4px solid #666;
     border-bottom: 4px solid #666;
