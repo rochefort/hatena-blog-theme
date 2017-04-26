@@ -52,7 +52,7 @@ a {
 .feedly-link {
    margin-top: -38px;
    padding-left: 86px;
- }
+}
 
 /* --------------------------------
  * Top Entries
@@ -60,12 +60,13 @@ a {
 #hatena-bookmark-widget0 {
     margin-top: -10px;
 }
-
 #hatena-bookmark-widget0 li {
-    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
     padding: .3em 5em .3em .7em
 }
-
+#hatena-bookmark-widget0 li:first-child {
+    border-top: 1px dotted #ccc;
+}
 #hatena-bookmark-widget0 li > a {
     color: #333;
     text-decoration: none;
@@ -110,15 +111,17 @@ a {
  * Recommendations
  * -------------------------------- */
 .recommendation-list li {
+    border-bottom: 1px dotted #ccc;
+}
+.recommendation-list li:first-child {
     border-top: 1px dotted #ccc;
- }
-
+}
 .recommendation-list li a {
     color: #333;
     display: block;
     text-decoration: none;
     padding: .3em .7em;
- }
+}
 
 /* --------------------------------
  * Recent Posts
