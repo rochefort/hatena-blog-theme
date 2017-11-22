@@ -129,3 +129,11 @@ a {
 .recent-entries-item-inner {
     padding: .3em .7em;
 }
+
+
+/* --------------------------------
+ * Categories
+ * -------------------------------- */
+.hatena-module-category .hatena-urllist li {
+    margin: -2px 5px 5px 4px;
+}
